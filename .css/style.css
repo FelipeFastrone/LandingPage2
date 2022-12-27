@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root {
+    --font01: font-family: 'Roboto', sans-serif;
+    --font02: font-family: 'Titillium Web', sans-serif;
+    
+    --cor01: #fff;
+    --cor02: rgba(37, 50, 116, 0.581);
+    --cor03: rgba(43, 60, 146, 0.581);
+    --cor04: rgb(232, 189, 163);
+
+}
+body {
+    width: 100%;
+    background-color: var(--cor03);
+
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 35px;
+    font-family: var(--font01);
+    background-color: var(--cor02);
+}
+.menuNav {
+    margin-right: 20px;
+    font-weight: 700;
+    font-size: 1.3em;
+    color: var(--cor01);
+}
+main {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 42px;
+   padding: 32px;
+   margin: 50px;
+   
+
+   
+}
+main h2 {
+    color: var(--cor01);
+    font-family: var(--font02);
+    font-size: 1.8em;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.servicos > ul > li {
+    color: var(--cor01);
+    font-family: var(--font01);
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+.sobre img{
+    height: 300px;
+    border-radius: 8px;
+    flex-wrap: wrap;
+
+}
+
+button {
+    width: 180px;
+
+    padding: 24px;
+    margin: auto;
+    border-radius: 20px;
+}
+footer {
+    margin-top: 150px;
+    padding: 32px;
+    color: var(--cor01);
+    line-height: 30px;
+
+    background-color: var(--cor02);
+
+}
