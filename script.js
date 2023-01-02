@@ -6,9 +6,11 @@ buttonClose.addEventListener('click', closeMenu);
 
 function openMenu() {
     document.body.classList.add('menuActive');
+    
 }
 function closeMenu() {
-    document.body.classList.remove('menuActive')
+    document.body.classList.remove('menuActive');
+    
 }
 
 openMenu();

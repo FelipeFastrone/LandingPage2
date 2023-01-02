@@ -57,102 +57,6 @@ body {
     color: white;
 }
 
-nav .menuActive {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 60%;
-  }
-  nav .menuNav a:nth-child(1) {
-    display: flex;
-    gap: 3.2rem;
-  }
-
-  nav .menuNav  a {
-    color: var(--cor02);
-    opacity: 0.7;
-  }
-
-  nav .menuNav a.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 2.4rem;
-
-    border: 1px solid var(--cor05);
-    border-radius: 4rem;
-
-    color: var(--cor02);
-
-    font-weight: 700;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    text-transform: uppercase;
-  }
-
- .menuNav a.button:hover {
-    background-color: var(--cor02);
-    border: none;
-    color: white;
-  }
-
-  .menuNav a {
-    color: var(--cor03);
-    opacity: 0.6;
-  }
-
-  nav .menuNav a.button {
-    border-color: white;
-    color: white;
-  }
-
-   .menuNav a {
-    transition: opacity 0.4s;
-  }
-
-   .menuNav,
-   .menuNav a:hover {
-    opacity: 1;
-    font-weight: 700;
-  }
-
-   .menuNav  a::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background-color: var(--cor02);
-
-    position: relative;
-    bottom: -2rem;
-    left: -0.5rem;
-
-    display: block;
-
-    transition: width 0.2s;
-  }
-
-  .menuNav  a::after {
-    background-color: white;
-  }
-
- .menuNav,
- .menuNav a:hover::after {
-    padding-inline: 0.8rem;
-    width: 100%;
-  }
-
-   .menuNav,
-   .menuNav  a:hover {
-    opacity: 1;
-  }
-
- .menuNav 
-  .menuNav a.button:hover {
-    background-color: var(--cor02);
-    filter: brightness(1.3);
-    border: none;
-  }
-/*  */
 nav button {
     background: none;
     border: none;
@@ -282,8 +186,8 @@ footer {
 
 /* =========responsivo======== */
 @media (max-width: 780px) {
-   
-   
+    
+    
     
     main {
         display: flex;
@@ -297,67 +201,75 @@ footer {
         margin-top: 100px;
         margin-right: 104px;
     }
-    nav {
-        display: flex;
-      
-        height: 84px;
-      
-        position: fixed;
-        top: 0;
-        width: 95%;
-      
-        z-index: 100;
-      }
-    
-    body.menuActive, .menuNav {
-        display: block;
+    nav .menuNav a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: var(--cor02);
+
+    position: relative;
+    bottom: -2rem;
+    left: -0.5rem;
+
+    display: block;
+
+    transition: 0.2s;
     }
-    body.menuActive > :not(nav)  {
+    body.menuActive {
+      overflow: hidden;
+    }
+      
+    .menuActive > :not(nav)  {
         visibility: hidden;
     }
     .menuNav,
     .close-menu,
     body.menuActive .open-menu {
         opacity: 0;
-        visibility: visible;
+        visibility: hidden;
     }
-    body.menuActive,
+    
+    body.menuActive .menuNav,
     body.menuActive .close-menu {
+     opacity: 1;
+     visibility: visible;
+   }
+   .open-menu, .close-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+   }
+
+
+    
+
+
+    body.menuActive,
+    body.menuActive {
       opacity: 1;
       visibility: visible;
     }
-    .menuNav {
-        transform: translateY(100%);
-    }
-      body.menuActive .menuNav {
-        top: 0;
-        left: 0;
-        background: var(--cor02);
-      
-        width: 100vw;
-        height: 100vh;
-      
-        padding-top: 20px;
-      
-        transition: transform 300ms;
-        transform: translateY(0);
-      }
-      .menuNav ul:nth-child(1) {
+    
+    body.menuActive .menuNav,
+    body.menuActive .close-menu{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         gap: 4.8rem;
       
-        margin-top: 6rem;
+        
       
         font-weight: 700;
         font-size: 2.4rem;
         line-height: 3.1rem;
+       
+       
       }
-      .menuNav ul li a {
-        color: white;
-        text-decoration: none;
-      }
-      .menuNav .button {
+     
+    
+      body.menuActive .menuNav,
+      body.menuActive .close-menu {
         background: white;
         border-radius: 4rem;
         font-weight: 700;
@@ -368,15 +280,17 @@ footer {
       
         color: var(--cor02);
       
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
         padding: 16px 32px;
       
         margin-top: 4.8rem;
-        margin-bottom: 8rem;
+        margin-bottom: 2rem;
+        margin-right: 630px;
       }
       
-      .menuNav .button:hover {
-        background-color: var(--cor02);
+      nav .menuNav .button:hover {
+        background-color: var(--cor05);
         color: white;
       
         filter: brightness(1.3);
@@ -388,10 +302,7 @@ footer {
       z-index: 100;
     }
     
-    body.menuActive .logo path {
-      fill: white;
-    }
-    
+       
     body.menuActive button path {
       stroke:rgb(17, 25, 58);
       
@@ -416,7 +327,7 @@ footer {
         font-family: var(--font01);
         background-color: var(--cor02);
     
-        width: 100vw;
+        
       
                  
     }
@@ -429,6 +340,12 @@ footer {
     .open-menu, .close-menu {
         display: none;
     }
+    
+    
+  
+    
+  
+   
     
    
 }

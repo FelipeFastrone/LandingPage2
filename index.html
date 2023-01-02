@@ -16,16 +16,10 @@
         <img src="" alt="Logo">
       </div>
         <nav>
-     
-        
-            <a class="menuNav" href="#servicos">Serviços</a>
-            <a class="menuNav" href="#">Sobre</a>
-            <a class="menuNav" href="#socialLinks">Contato</a>
-
-            <button
+          <button
           aria-expanded="false"
           aria-label="Abrir menu"
-        
+          onclick="openMenu()"
           class="open-menu"
         >
           <svg
@@ -80,6 +74,13 @@
           />
         </svg>
       </button>
+        
+            <a class="menuNav"  onclick="closeMenu()" href="#servicos">Serviços</a>
+            <a class="menuNav" onclick="closeMenu()"href="#">Sobre</a>
+            <a class="menuNav" onclick="closeMenu() "href="#socialLinks">Contato</a>
+
+         
+       
        
             
         </nav>
