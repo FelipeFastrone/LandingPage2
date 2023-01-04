@@ -29,6 +29,11 @@ body {
     background-color: var(--cor03);
 
 }
+.divImg img {
+    display: inline;
+    height: 19%;
+}
+
 
 .header {
     display: flex;
@@ -38,7 +43,7 @@ body {
     font-family: var(--font01);
     background-color: var(--cor02);
 
-    width: 100vw;
+    /* width: 100vw; */
     
  
     
@@ -286,7 +291,7 @@ footer {
       
         margin-top: 4.8rem;
         margin-bottom: 2rem;
-        margin-right: 630px;
+        /* margin-right: 630px; */
       }
       
       nav .menuNav .button:hover {
